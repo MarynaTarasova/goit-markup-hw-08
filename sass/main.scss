@@ -1,0 +1,24 @@
+// Utils
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+
+// Base
+@import "./base/common.scss";
+@import "./base/container";
+
+// Components
+@import "./components/social-link-list";
+@import "./components/modal-btn";
+@import "./components/backdrop";
+@import "./components/modal-window";
+@import "./components/modal-form";
+
+// Layout
+@import "./layout/header";
+@import "./layout/main-section";
+@import "./layout/advantages";
+@import "./layout/activity";
+@import "./layout/team";
+@import "./layout/clients";
+@import "./layout/footer";
+@import "./layout/portfolio";
