@@ -1,11 +1,13 @@
 .social-list {
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
     padding-left: 32px;
     padding-right: 32px;
     padding-top: 16px;
 }
+
+
 
 .social-list__link {
     display: flex;

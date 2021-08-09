@@ -1,16 +1,71 @@
-/* .advantages-section {
-    padding-top: 94px;
-}
+
 .advantages-menu {
     display: block;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
-.advantages__item {
+@media screen and (max-width: 767px) {
+    .advantages__title {
+        text-align: center;
+    }
+    .advantages__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .advantages-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .advantages-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .advantages__item {
+        width: 354px;
+    }
+    .advantages-item-upper {
+        margin-bottom: 30px;
+    }
+    .advantages-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .advantages-menu {
+        flex-basis: calc((100% - 120px) / 4);
+    }
+    .advantages__item {
+        width: 270px;
+    }
+    .advantages-section {
+        padding-top: 94px;
+        padding-bottom: 0;
+    }
+}
+
+
+.advantages-container {
     display: flex;
-    flex-wrap: wrap;
-    flex-basis: calc((100% - 120px) / 4);
-    margin-top: 30px;
-    margin-left: 30px;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    background-color: var(--team-background);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+
+.advantages__icons {
+    display: flex;
+    align-items: center;
+    width: 70px;
+    height: 70px;
 }
 
 .advantages__title {
@@ -20,7 +75,6 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 10px;
-    padding-left: 0;
 }
 
 .advantages__text {
@@ -28,23 +82,5 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--third-accent-color);
-   
 }
 
-.advantages-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 270px;
-    height: 120px;
-    background-color: var(--team-background);
-    border-radius: 4px;
-    margin-bottom: 30px;
-}
-
-.advantages__icons {
-    display: flex;
-    align-items: center;
-    width: 70px;
-    height: 70px;
-} */

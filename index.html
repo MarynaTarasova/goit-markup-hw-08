@@ -46,24 +46,69 @@
                         </svg> +380 96 111 11 11</a>
                 </li>
             </ul>
+            <button type="button" class="burger-btn" data-menu-open>
+                <svg class="burger-btn__icon">
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
+            <div class="mobile-menu" data-menu>
+                <button class="mobile-menu__close-btn" data-menu-close>
+                    <svg class="mobile-menu__icon">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <ul class="mobile-menu__nav list">
+                    <li class="mobile-menu__nav-item">
+                        <a href="" class="nav-item-link link">Студия</a>
+                    </li>
+                    <li class="mobile-menu__nav-item">
+                        <a href="" class="nav-item-link link">Портфолио</a>
+                    </li>
+                    <li class="mobile-menu__nav-item">
+                        <a href="" class="nav-item-link link">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="mobile-menu__contacts list">
+                    <li class="mobile-menu__contacts-item">
+                        <a class="contacts-item-tel link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                    <li class="mobile-menu__contacts-item">
+                        <a class="contacts-item-mail link" href="tel:+380961111111">+38 096 111 11 11</a>
+                    </li>
+                </ul>
+                <ul class="mobile-menu__social list">
+                    <li class="mobile-menu__social-item">
+                        <a class="social-page link" href="#">Instagram</a>
+                    </li>
+                    <li class="mobile-menu__social-item">
+                        <a class="social-page link" href="#">Twitter</a>
+                    </li>
+                    <li class="mobile-menu__social-item">
+                        <a class="social-page link" href="#">Facebook</a>
+                    </li>
+                    <li class="mobile-menu__social-item">
+                        <a class="social-page link" href="#">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
     <main class="main">
         <!-- Main section !-->
-        <section class="main-section">
+       <section class="main-section">
             <div class="container main-section-container">
                 <h1 class="title-main-section">Эффективные решения для вашего бизнеса</h1>
                 <button class="modal-btn" type="button" data-modal-open>Заказать услугу</button>
             </div>
-        </section> 
+        </section>
 
         <!-- Advantages !-->
         <section class="advantages advantages-section"> 
             <div class="container container">
                 <h2 hidden>Преимущества</h2>
                 <ul class="advantages-menu list">
-                    <li class="advantages__item">
+                    <li class="advantages__item advantages-item-upper">
                         <div class="advantages-container">
                             <svg class="advantages__icons">
                                 <use href="./images/icons.svg#icon-antenna">
@@ -73,7 +118,7 @@
                         <h3 class="advantages__title">Внимание к деталям</h3>
                         <p class="advantages__text">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
                     </li>
-                    <li class="advantages__item">
+                    <li class="advantages__item advantages-item-upper">
                         <div class="advantages-container">
                             <svg class="advantages__icons">
                                 <use href="./images/icons.svg#icon-clock">
@@ -140,15 +185,35 @@
 
                 </ul>
             </div>
-        </section> -->
+        </section> 
 
         <!-- Team -->
-        <section class="team section">
+       <section class="team section">
             <div class="container team-container">
                 <h2 class="team-title">Наша команда</h2>
                 <ul class="team-menu list">
                     <li class="team-menu__item">
-                        <img src="./images/members/igor.jpg" alt="Игорь Демьяненко" width="270" height="260">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                            srcset="
+                                ./images/desktop/team1.jpg 1x,
+                                ./images/desktop/team1@2x.jpg 2x
+                            "
+                            >
+                            <source media="(min-width: 768px)"
+                            srcset="
+                                ./images/tablet/team1.jpg 1x,
+                                ./images/tablet/team1@2x.jpg 2x
+                            "
+                            >
+                            <source media="(max-width: 767px)"
+                            srcset="
+                                ./images/mobile/team1.jpg 1x,
+                                ./images/mobile/team1@2x.jpg 2x
+                            "
+                            >
+                            <img src="./images/members/igor.jpg" alt="Игорь" width="100%">
+                        </picture>
                         <div class="team-box-content">
                             <h3 class="team__name">Игорь Демьяненко</h3>
                             <p class="team__prof">Product Designer</p>
@@ -187,7 +252,27 @@
                         </div>
                     </li>
                     <li class="team-menu__item">
-                        <img src="./images/members/olha.jpg" alt="Ольга Репина" width="270" height="260">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                            srcset="
+                                ./images/desktop/team2.jpg 1x,
+                                ./images/desktop/team2@2x.jpg 2x
+                            "
+                            >
+                            <source media="(min-width: 768px)"
+                            srcset="
+                                ./images/tablet/team2.jpg 1x,
+                                ./images/tablet/team2@2x.jpg 2x
+                            "
+                            >
+                            <source media="(max-width: 767px)"
+                            srcset="
+                                ./images/mobile/team2.jpg 1x,
+                                ./images/mobile/team2@2x.jpg 2x
+                            "
+                            >
+                            <img src="./images/members/olha.jpg" alt="Ольга" width="100%">
+                        </picture>
                         <div class="team-box-content">
                             <h3 class="team__name">Ольга Репина</h3>
                             <p class="team__prof">Frontend Developer</p>
@@ -226,7 +311,27 @@
                         </div>
                     </li>
                     <li class="team-menu__item">
-                        <img src="./images/members/nikolai.jpg" alt="Николай Тарасов" width="270" height="260">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                            srcset="
+                                ./images/desktop/team3.jpg 1x,
+                                ./images/desktop/team3@2x.jpg 2x
+                            "
+                            >
+                            <source media="(min-width: 768px)"
+                            srcset="
+                                ./images/tablet/team3.jpg 1x,
+                                ./images/tablet/team3@2x.jpg 2x
+                            "
+                            >
+                            <source media="(max-width: 767px)"
+                            srcset="
+                                ./images/mobile/team3.jpg 1x,
+                                ./images/mobile/team3@2x.jpg 2x
+                            "
+                            >
+                            <img src="./images/members/nikolai.jpg" alt="Николай" width="100%">
+                        </picture>
                         <div class="team-box-content">
                             <h3 class="team__name">Николай Тарасов</h3>
                             <p class="team__prof">Marketing</p>
@@ -265,7 +370,27 @@
                         </div>
                     </li>
                     <li class="team-menu__item">
-                        <img src="./images/members/mikhail.jpg" alt="Михаил Ермаков" width="270" height="260">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                            srcset="
+                                ./images/desktop/team4.jpg 1x,
+                                ./images/desktop/team4@2x.jpg 2x
+                            "
+                            >
+                            <source media="(min-width: 768px)"
+                            srcset="
+                                ./images/tablet/team4.jpg 1x,
+                                ./images/tablet/team4@2x.jpg 2x
+                            "
+                            >
+                            <source media="(max-width: 767px)"
+                            srcset="
+                                ./images/mobile/team4.jpg 1x,
+                                ./images/mobile/team4@2x.jpg 2x
+                            "
+                            >
+                            <img src="./images/members/mikhail.jpg" alt="Миихаил" width="100%">
+                        </picture>
                         <div class="team-box-content">
                             <h3 class="team__name">Михаил Ермаков</h3>
                             <p class="team__prof">UI Designer</p>
@@ -305,7 +430,8 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> 
+        
 
         <!-- Clients -->
 
@@ -364,7 +490,7 @@
                 </ul>
 
             </div>
-        </section>
+        </section> 
     </main>
 
 
@@ -447,7 +573,7 @@
             </div>
              
         </div>
-    </footer>
+    </footer> 
 
     <!-- Modal -->
 
@@ -511,6 +637,7 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 
 </body>
 </html>
