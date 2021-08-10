@@ -49,6 +49,11 @@
     }
   }
 
+  @media screen and (max-width: 767px) {
+    .title-main-section {
+        max-width: 360px;
+    }
+  }
   @media screen and (min-width: 768px) {
     .main-section  {
         
