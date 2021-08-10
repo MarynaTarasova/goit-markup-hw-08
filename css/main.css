@@ -636,6 +636,16 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
     -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -674,11 +684,6 @@ body {
     width: 40px;
     height: 40px;
   }
-  .mobile-menu__nav {
-    margin-top: 48px;
-    margin-bottom: 302px;
-    padding-left: 40px;
-  }
   .nav-item-link {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -697,7 +702,7 @@ body {
     margin-bottom: 32px;
   }
   .mobile-menu__contacts {
-    padding-left: 40px;
+    margin-top: auto;
     margin-bottom: 64px;
   }
   .mobile-menu__contacts-item:not(:last-child) {
@@ -722,7 +727,6 @@ body {
     color: #757575;
   }
   .mobile-menu__social {
-    padding-left: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1272,9 +1276,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
   .activity__item:not(:last-child) {
     margin-right: 30px;
@@ -1668,6 +1669,8 @@ body {
   .first-footer-div {
     display: block;
     text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
   .footer-form-name {
     display: block;
@@ -1761,6 +1764,10 @@ body {
     display: block;
     text-align: center;
   }
+  .first-footer-div {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1794,6 +1801,13 @@ body {
     text-align: left;
   }
   .footer-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-right: 0;
   }
   .footer-form {
@@ -1881,11 +1895,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.first-footer-div {
-  margin-top: 60px;
-  margin-bottom: 60px;
 }
 
 .footer-social-icon {
